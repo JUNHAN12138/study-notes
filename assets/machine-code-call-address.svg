@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 390" role="img" aria-labelledby="title desc">
+ <title id="title">call相对寻址与小端顺序</title>
+ <desc id="desc">call从00401025H开始，占5字节，下一条指令地址0040102AH。目标00401000H减下一条地址，位移为负2AH。32位补码FFFFFFD6H在小端内存中按D6、FF、FF、FF排列。</desc>
+ <rect x="1" y="1" width="618" height="388" rx="12" fill="#fff" stroke="#dedede"/>
+ <g font-family="Microsoft YaHei, Segoe UI, sans-serif" text-anchor="middle" fill="#303030">
+  <text x="310" y="32" font-size="19" font-weight="600">相对位移：目标地址 − 下一条指令地址</text>
+  <rect x="30" y="58" width="155" height="68" rx="7" fill="#f5f1ff" stroke="#ddd3ee"/>
+  <text x="107" y="84" font-size="15">目标 · 函数入口</text><text x="107" y="109" font-size="18" fill="#7543ad">00401000H</text>
+  <rect x="235" y="58" width="155" height="68" rx="7" fill="#fff7ed" stroke="#f0d9bb"/>
+  <text x="312" y="84" font-size="15">call起始地址</text><text x="312" y="109" font-size="18" fill="#a85b0a">00401025H</text>
+  <rect x="435" y="58" width="155" height="68" rx="7" fill="#eff5ff" stroke="#d3dff3"/>
+  <text x="512" y="84" font-size="15">下一条 · 位移基准</text><text x="512" y="109" font-size="18" fill="#215bc4">0040102AH</text>
+  <path d="M394 93H430m-7-5 7 5-7 5" stroke="#626262" stroke-width="1.5" fill="none"/>
+  <text x="411" y="145" font-size="15">+5B</text>
+  <text x="310" y="182" font-size="18">00401000H − 0040102AH = −2AH</text>
+  <text x="310" y="213" font-size="16">32位补码：FFFFFFD6H</text>
+  <text x="310" y="250" font-size="15">机器代码 · 按地址从低到高排列 →</text>
+  <g stroke="#dedede" fill="#fff"><rect x="90" y="268" width="88" height="46"/><rect x="178" y="268" width="88" height="46" fill="#fff7ed"/><rect x="266" y="268" width="88" height="46"/><rect x="354" y="268" width="88" height="46"/><rect x="442" y="268" width="88" height="46"/></g>
+  <g font-size="20"><text x="134" y="299">E8</text><text x="222" y="299" fill="#a85b0a">D6</text><text x="310" y="299">FF</text><text x="398" y="299">FF</text><text x="486" y="299">FF</text></g>
+  <text x="134" y="343" font-size="14">操作码</text><text x="222" y="343" font-size="14" fill="#a85b0a">低有效字节</text>
+  <text x="398" y="373" font-size="15">位移4字节 · 小端方式</text>
+ </g>
+</svg>

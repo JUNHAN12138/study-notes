@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 310" role="img" aria-labelledby="title desc">
+  <title id="title">簇13如何定位到柱面1、磁头1、扇区2</title>
+  <desc id="desc">每柱面8簇，每磁道4簇。簇13除以8得到柱面1、余5；5除以4得到磁头1、余1；每簇两扇区，所以从扇区2开始。</desc>
+  <rect x="1" y="1" width="718" height="308" rx="12" fill="white" stroke="#dedede"/>
+  <g font-family="Segoe UI, Microsoft YaHei, sans-serif" fill="#303030" text-anchor="middle">
+    <text x="360" y="36" font-size="18" font-weight="600">每柱面 2 磁道 · 每磁道 8 扇区 · 每簇 2 扇区</text>
+    <rect x="25" y="62" width="200" height="86" rx="8" fill="white" stroke="#bcbcbc"/>
+    <rect x="260" y="62" width="200" height="86" rx="8" fill="white" stroke="#bcbcbc"/>
+    <rect x="495" y="62" width="200" height="86" rx="8" fill="white" stroke="#bcbcbc"/>
+    <text x="125" y="91" font-size="16">先找柱面</text><text x="125" y="123" font-size="20" fill="#215bc4">13 = 1 × 8 + 5</text>
+    <text x="360" y="91" font-size="16">再找磁头</text><text x="360" y="123" font-size="20" fill="#215bc4">5 = 1 × 4 + 1</text>
+    <text x="595" y="91" font-size="16">换算起始扇区</text><text x="595" y="123" font-size="20" fill="#215bc4">1 × 2 = 2</text>
+    <text x="242" y="112" font-size="24">→</text><text x="478" y="112" font-size="24">→</text>
+    <text x="360" y="181" font-size="16">柱面 1 · 磁头 1：一条磁道内的 8 个扇区</text>
+    <g fill="white" stroke="#bcbcbc"><rect x="100" y="198" width="65" height="42"/><rect x="165" y="198" width="65" height="42"/><rect x="230" y="198" width="65" height="42" fill="#edf3ff"/><rect x="295" y="198" width="65" height="42" fill="#edf3ff"/><rect x="360" y="198" width="65" height="42"/><rect x="425" y="198" width="65" height="42"/><rect x="490" y="198" width="65" height="42"/><rect x="555" y="198" width="65" height="42"/></g>
+    <g font-size="18"><text x="132" y="226">0</text><text x="197" y="226">1</text><text x="262" y="226">2</text><text x="327" y="226">3</text><text x="392" y="226">4</text><text x="457" y="226">5</text><text x="522" y="226">6</text><text x="587" y="226">7</text></g>
+    <path d="M230 247v7h130v-7" fill="none" stroke="#215bc4" stroke-width="2"/>
+    <text x="295" y="279" fill="#215bc4" font-size="16">簇 13：占用扇区 2、3</text>
+  </g>
+</svg>

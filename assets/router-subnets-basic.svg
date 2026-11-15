@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 420" role="img" aria-labelledby="title desc">
+ <title id="title">交换机连接同子网，路由器连接不同子网</title>
+ <desc id="desc">左侧192.168.1.0/26广播地址为.63，右侧192.168.1.64/26广播地址为.127，两者由路由器接口.1和.65连接。各侧的广播保留在自己的子网内。</desc>
+ <rect x="1" y="1" width="478" height="418" rx="10" fill="#fff" stroke="#dedede"/>
+ <g font-family="Microsoft YaHei, Segoe UI, sans-serif" text-anchor="middle" fill="#303030">
+  <text x="240" y="31" font-size="19">不同子网，经路由器转发</text>
+  <rect x="155" y="57" width="170" height="54" rx="7" fill="#f4effb" stroke="#d9cee8"/>
+  <text x="240" y="91" font-size="20" fill="#7543ad">路由器</text>
+  <path d="M185 111V152H115V194M295 111V152H365V194" fill="none" stroke="#626262" stroke-width="1.5"/>
+  <text x="113" y="137" font-size="16">网关 .1/26</text><text x="365" y="137" font-size="16">网关 .65/26</text>
+  <rect x="20" y="178" width="210" height="216" rx="7" fill="#fff" stroke="#dedede"/>
+  <rect x="250" y="178" width="210" height="216" rx="7" fill="#fff" stroke="#dedede"/>
+  <text x="125" y="210" font-size="17" fill="#215bc4">192.168.1.0/26</text>
+  <text x="355" y="210" font-size="17" fill="#a85b0a">192.168.1.64/26</text>
+  <rect x="65" y="231" width="120" height="39" rx="5" fill="#eff5ff"/><rect x="295" y="231" width="120" height="39" rx="5" fill="#fff3e6"/>
+  <text x="125" y="257" font-size="17">交换机</text><text x="355" y="257" font-size="17">交换机</text>
+  <path d="M125 270V292M355 270V292" fill="none" stroke="#626262" stroke-width="1.5"/>
+  <text x="125" y="317" font-size="18">主机 .10/26</text><text x="355" y="317" font-size="18">主机 .70/26</text>
+  <text x="125" y="356" font-size="17" fill="#215bc4">本子网广播：.63</text><text x="355" y="356" font-size="17" fill="#a85b0a">本子网广播：.127</text>
+  <text x="240" y="412" font-size="14">地址前缀均为192.168.1；两侧广播域分开</text>
+ </g>
+</svg>

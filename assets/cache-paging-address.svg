@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 370" role="img" aria-labelledby="title desc">
+ <title id="title">32位地址：分页与Cache字段对照</title>
+ <desc id="desc">4KB分页时，高20位为页号，低12位为页内偏移。64行四路组相联、块64B时，高22位为tag，第6至9位为组号，低6位为块内偏移。call的页内偏移025H拆为00、0000、100101，所以组号为0。</desc>
+ <rect x="1" y="1" width="478" height="368" rx="10" fill="#fff" stroke="#dedede"/>
+ <g font-family="Microsoft YaHei, Segoe UI, sans-serif" fill="#303030" text-anchor="middle">
+  <text x="240" y="30" font-size="19">同一个32位地址，两种划分用途</text>
+  <text x="20" y="64" text-anchor="start" font-size="17">分页：4KB一页</text>
+  <rect x="20" y="78" width="275" height="52" fill="#f4effb"/><rect x="295" y="78" width="165" height="52" fill="#edf7f9"/>
+  <text x="157" y="100" font-size="17" fill="#7543ad">页号20位</text><text x="157" y="121" font-size="15">第31～12位</text>
+  <text x="377" y="100" font-size="17" fill="#136a79">页内偏移12位</text><text x="377" y="121" font-size="15">第11～0位</text>
+  <text x="20" y="171" text-anchor="start" font-size="17">Cache：16组，每组4行，块大小64B</text>
+  <rect x="20" y="185" width="300" height="58" fill="#f4effb"/><rect x="320" y="185" width="60" height="58" fill="#fff3e6"/><rect x="380" y="185" width="80" height="58" fill="#edf7f9"/>
+  <text x="170" y="210" font-size="17" fill="#7543ad">tag 22位</text><text x="170" y="232" font-size="15">第31～10位</text>
+  <text x="350" y="209" font-size="17" fill="#a85b0a">组号</text><text x="350" y="231" font-size="17">4位</text>
+  <text x="420" y="209" font-size="16" fill="#136a79">块内偏移</text><text x="420" y="231" font-size="17">6位</text>
+  <text x="240" y="281" font-size="17">call的页内偏移：025H</text>
+  <text x="130" y="313" font-size="20" fill="#7543ad">00</text><text x="240" y="313" font-size="20" fill="#a85b0a">0000</text><text x="355" y="313" font-size="20" fill="#136a79">100101</text>
+  <text x="240" y="346" font-size="17" fill="#a85b0a">组号0000₂ → 第0组</text>
+ </g>
+</svg>
